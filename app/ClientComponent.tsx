@@ -6,11 +6,14 @@ export function ClientComponent() {
   const [publicApiUrl, setPublicApiUrl] = useState<string>("");
   const [privateApiSecret, setPrivateApiSecret] = useState<string>("");
 
+  console.log("update");
+
   useEffect(() => {
     setPublicApiUrl(process.env.NEXT_PUBLIC_API_URL || "");
     setPrivateApiSecret(process.env.API_SECRET || "");
 
     // 브라우저 콘솔에 환경 변수 출력
+
     console.log("====클라이언트에서 접근 가능한 환경 변수====");
     console.log(
       "NEXT_PUBLIC_ENVIRONMENT:",
