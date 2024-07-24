@@ -6,6 +6,8 @@ export function ClientComponent() {
   const [publicApiUrl, setPublicApiUrl] = useState<string>("");
   const [privateApiSecret, setPrivateApiSecret] = useState<string>("");
 
+  console.log("update");
+
   useEffect(() => {
     setPublicApiUrl(process.env.NEXT_PUBLIC_API_URL || "");
     setPrivateApiSecret(process.env.API_SECRET || "");
